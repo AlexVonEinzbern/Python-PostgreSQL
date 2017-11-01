@@ -24,7 +24,6 @@ class DataBaseConnection:
 
 
 	#Vamos a ingresar un valor a la tabla "productos"
-	#Existe un problema con el insert_command, falta un new_record[2]
 	
 	def insert_new_record(self):
 		new_record = ("1234567","Freno","1637237")
