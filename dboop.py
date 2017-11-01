@@ -27,7 +27,7 @@ class DataBaseConnection:
 
 	def insert_new_record(self):
 		new_record = ("1234567","Freno","1637237")
-		insert_command = "INSERT INTO productos(id, nombre, valor) VALUES('"+ new_record[0] + "','" + new_record[1] +"')"
+		insert_command = "INSERT INTO productos(id, nombre, valor) VALUES('"+ new_record[0] + "','" + new_record[1] + "','" + new_record[2] + "')"
 		pprint(insert_command)
 		self.cursor.execute(insert_commnad)
 
