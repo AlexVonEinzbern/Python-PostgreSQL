@@ -8,8 +8,8 @@ class DataBaseConnection:
 		#Hacemos la conexion de nuestro programa de python con la base de datos.
 		#Usamos un try y except en caso de que el programa por algun motivo no se pudo conectar a nuestra base de datos.
 		try:
-			self.connection = psycopg2.connect('dbname = empresa user = user password = password host = localhost')
-			self.conenction.autocommit = True
+			self.connection = psycopg2.connect("dbname = 'empresa' user = 'empresa' password = '123456789' host = 'localhost'")
+			self.connection.autocommit = True
 			self.cursor = self.connection.cursor()
 		except:
 			pprint("No se puede conectar con la base de datos.")
@@ -48,7 +48,7 @@ if  __name__ == '__main__':
 	database_connection.create_table()
 
 	#Usamos el objeto database_connection para añadir un valor a la tabla.
-	database_connection.insert_new_record()
+	#database_connection.insert_new_record()
 		
 	#Usamos el objeto database_connection para hacer una consulta a toda la tabla.
-	database_connection.query_all()
+	#database_connection.query_all()
