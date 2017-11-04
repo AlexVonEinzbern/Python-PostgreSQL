@@ -8,7 +8,7 @@ class DataBaseConnection:
 		#Hacemos la conexion de nuestro programa de python con la base de datos.
 		#Usamos un try y except en caso de que el programa por algun motivo no se pudo conectar a nuestra base de datos.
 		try:
-			self.connection = psycopg2.connect("dbname=empresa user=empresa password=123456789 host=localhost")
+			self.connection = psycopg2.connect("dbname='empresa' user='empresa' password='123456789' host='localhost'")
 			self.connection.autocommit = True
 			self.cursor = self.connection.cursor()
 		except:
