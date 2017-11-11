@@ -2,7 +2,6 @@ import psycopg2
 from pprint import pprint
 
 #Creamos la clase DataBaseConnection.
-
 class DataBaseConnection:
 
 	def __init__(self):
