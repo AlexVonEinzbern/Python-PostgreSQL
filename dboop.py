@@ -1,3 +1,5 @@
+#Versión 1.0.1
+
 import psycopg2
 from pprint import pprint
 
@@ -6,7 +8,7 @@ from pprint import pprint
 class DataBaseConnection:
 
 	def __init__(self):
-		
+
 		#Hacemos la conexion de nuestro programa de python con la base de datos.
 		#Usamos un try y except en caso de que el programa por algun motivo no se pudo conectar a nuestra base de datos.
 		try:
@@ -15,7 +17,7 @@ class DataBaseConnection:
 			self.cursor = self.connection.cursor()
 		except:
 			pprint('No se puede conectar con la base de datos.')
-	
+
 
 	#Vamos a crear una tabla llamada "productos" en la base de datos "empresa"
 	#La tabla "productos" tendra como valores a id (llave primaria), nombre (string) y valor (decimal)
@@ -26,7 +28,7 @@ class DataBaseConnection:
 
 
 	#Vamos a ingresar un valor a la tabla "productos"
-	
+
 	def insert_new_record(self):
 		new_record = ("1234567","Freno","1637237")
 		insert_command = "INSERT INTO productos(id, nombre, valor) VALUES('"+ new_record[0] + "','" + new_record[1] + "','" + new_record[2] + "')"
@@ -42,7 +44,7 @@ class DataBaseConnection:
 			pprint("Cada producto : {0}".format(i))
 
 if  __name__ == '__main__':
-	
+
 	#Creamos el objeto database_connection.
 	database_connection = DataBaseConnection()
 
@@ -51,7 +53,7 @@ if  __name__ == '__main__':
 
 	#Usamos el objeto database_connection para añadir un valor a la tabla.
 	#database_connection.insert_new_record()
-		
+
 	#Usamos el objeto database_connection para hacer una consulta a toda la tabla.
 	#database_connection.query_all()
 
