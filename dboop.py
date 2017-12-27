@@ -56,6 +56,3 @@ if  __name__ == '__main__':
 
 	#Usamos el objeto database_connection para hacer una consulta a toda la tabla.
 	#database_connection.query_all()
-
-
-#Comantario de prueba.
